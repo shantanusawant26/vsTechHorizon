@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
 });
 
 // Define URL handler
-app.use("/", conatactUsRouters);
+app.use("/contact", conatactUsRouters);
 
 // Start the server
 const PORT = 3006;
