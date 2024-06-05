@@ -1,21 +1,19 @@
 {
     "version": 2,
-    "name": "my-angular-node-app",
     "builds": [
-      
-
       {
-        "src": "frontend",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "frontend/docs" }
-      },
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "frontend/docs" }
+    },
+ 
       {
         "src": "backend/**/*.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/frontend/index.html"}
+      { "src": "/(.*)", "dest": "/frontend/docs/index.html"}
     ]
   }
   
