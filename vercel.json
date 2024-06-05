@@ -12,7 +12,7 @@
     }
   ],
   "routes": [
-    {"src":"/contact/(.*)","dest": "backend/app.js"},
+    {"src":"/api/(.*)","dest": "backend/app.js"},
     { "src": "/(.*)", "dest": "frontend/docs/index.html" }
   ]
 }
