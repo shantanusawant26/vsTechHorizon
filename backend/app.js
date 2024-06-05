@@ -3,11 +3,11 @@ const cors = require('cors');
 const express = require("express");
 const app = express();
 const conatactUsRouters = require("./contactUsRouters");
-const applicationFormRouters = require("./applicationFormRouters");
-const classesRouters = require('./classRouters')
-const bodyParser = require("body-parser");
-const subscribeRouters = require("./subscribeRouters")
-const chatBotRouter = require('./chatBotRouters')
+// const applicationFormRouters = require("./applicationFormRouters");
+// const classesRouters = require('./classRouters')
+// const bodyParser = require("body-parser");
+// const subscribeRouters = require("./subscribeRouters")
+// const chatBotRouter = require('./chatBotRouters')
 
 // Define middleware
 app.use(express.json());
@@ -17,9 +17,9 @@ app.use(cors());
 app.use('/resume', express.static('resume'));
 
 
-// app.use(cors({
-//     origin: 'http://localhost:4200' // Replace with your frontend URL
-//   }));
+app.use(cors({
+    origin: 'http://localhost:4200' // Replace with your frontend URL
+  }));
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -30,10 +30,7 @@ app.use(function(req, res, next) {
 
 // Define URL handler
 app.use("/", conatactUsRouters);
-// app.use("/",applicationFormRouters);
-// app.use("/",classesRouters)
-// app.use("/",subscribeRouters)
-// app.use("/",chatBotRouter)
+
 // Start the server
 const PORT = 3006;
 app.listen(PORT, () => {
