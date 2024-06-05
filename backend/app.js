@@ -31,9 +31,9 @@ app.use(function(req, res, next) {
 // Define URL handler
 app.use("/", conatactUsRouters);
 app.use("/",applicationFormRouters);
-app.use("/",classesRouters)
-app.use("/",subscribeRouters)
-app.use("/",chatBotRouter)
+// app.use("/",classesRouters)
+// app.use("/",subscribeRouters)
+// app.use("/",chatBotRouter)
 // Start the server
 const PORT = 3006;
 app.listen(PORT, () => {
