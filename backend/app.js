@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 
 // Define URL handler
 app.use("/", conatactUsRouters);
-app.use("/",applicationFormRouters);
+// app.use("/",applicationFormRouters);
 // app.use("/",classesRouters)
 // app.use("/",subscribeRouters)
 // app.use("/",chatBotRouter)
