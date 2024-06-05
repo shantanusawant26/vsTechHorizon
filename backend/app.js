@@ -27,9 +27,14 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-
+app.get('/api/contact', (req, res) => {
+    res.json({ message: 'Contact API' });
+  });
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/docs', 'index.html'));
+  });
 // Define URL handler
-app.use("/contact", conatactUsRouters);
+// app.use("/contact", conatactUsRouters);
 
 // Start the server
 const PORT = 3000;
