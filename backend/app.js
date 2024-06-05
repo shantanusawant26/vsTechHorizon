@@ -52,7 +52,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../frontend/docs')));
+// app.use(express.static(path.join(__dirname, '../frontend/docs')));
 
 // API endpoint example
 app.get('/api/contact', (req, res) => {
@@ -60,9 +60,9 @@ app.get('/api/contact', (req, res) => {
 });
 
 // Fallback to Angular's index.html for other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../frontend/docs', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../frontend/docs', 'index.html'));
+// });
 
 module.exports = app;
 
