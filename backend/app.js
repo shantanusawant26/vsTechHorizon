@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
 app.use("/contact", conatactUsRouters);
 
 // Start the server
-const PORT = 3006;
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`); 
 });

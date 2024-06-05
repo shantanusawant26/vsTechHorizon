@@ -35,7 +35,7 @@ export class FormComponent implements OnInit {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       console.log(formData)
-      this.http.post<any>('http://localhost:3006/contact', formData).subscribe(
+      this.http.post<any>('http://localhost:3000/contact', formData).subscribe(
         response => {
           console.log(response);
           alert('Form submitted successfully!');
