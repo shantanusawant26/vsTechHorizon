@@ -1,14 +1,11 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "frontend/docs" }
-    }
+    { "src": "frontend", "use": "@vercel/static-build" },
+    { "src": "backend", "use": "@vercel/node" }
   ],
   "routes": [
-    
-    { "src": "/(.*)", "dest": "frontend/docs/index.html" }
+    { "src": "/api/(.*)", "dest": "backend/$1" },
+    { "src": "/(.*)", "dest": "frontend/index.html" }
   ]
 }
