@@ -2,6 +2,8 @@
     "version": 2,
     "name": "my-angular-node-app",
     "builds": [
+      
+
       {
         "src": "frontend",
         "use": "@vercel/static-build",
@@ -13,8 +15,7 @@
       }
     ],
     "routes": [
-      { "src": "^/(.*)", "dest": "/backend/$1" },
-      { "src": "^/(.*)", "dest": "/$1" }
+      
     ]
   }
   
