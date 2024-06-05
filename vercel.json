@@ -2,8 +2,13 @@
     "version": 2,
     "name": "my-angular-node-app",
     "builds": [
+      
       {
-        "src": "frontend/**/*",
+        "src": "frontend/package.json",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "frontend",
         "use": "@vercel/static-build",
         "config": { "distDir": "frontend/docs" }
       },
