@@ -3,9 +3,9 @@
     "name": "my-angular-node-app",
     "builds": [
       {
-        "src": "vsWeb/**/*",
+        "src": "frontend/**/*",
         "use": "@vercel/static-build",
-        "config": { "distDir": "vsWeb/docs" }
+        "config": { "distDir": "frontend/docs" }
       },
       {
         "src": "backend/**/*.js",
@@ -14,7 +14,7 @@
     ],
     "routes": [
       { "src": "/(.*)", "dest": "/backend/$1" },
-      { "src": "/(.*)", "dest": "/vsWeb/$1" }
+      { "src": "/(.*)", "dest": "/frontend/$1" }
     ]
   }
   
