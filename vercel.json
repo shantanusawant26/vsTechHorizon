@@ -1,15 +1,13 @@
 
-
 {
   "version": 2,
   "builds": [
     { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "docs/frontend" } },
     { "src": "backend/**/*.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "/backend/(.*)", "dest": "/backend/$1" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/frontend/$1" }
+  "rewrites": [
+    { "source": "/backend/(.*)", "destination": "/backend/$1" },
+    { "source": "/(.*)", "destination": "/frontend/$1" }
   ],
   "cleanUrls": true,
   "trailingSlash": false
