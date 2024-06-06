@@ -55,7 +55,7 @@ const app = express();
 // app.use(express.static(path.join(__dirname, '../frontend/docs')));
 
 // API endpoint example
-app.get('/api/contact', (req, res) => {
+app.get('/backend/contact', (req, res) => {
   res.json({ message: 'Contact API' });
 });
 
